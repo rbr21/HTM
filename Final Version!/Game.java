@@ -366,7 +366,7 @@ public class Game {
 		position = "intro";
 
 		mainTextArea.setText("*INCOMING MESSAGE*\n"
-				+ "Be aware, The PHISHER, loves novelty security tech. You will need to find out some information about him. We do not have anything on our CIA database, but the PHISHER is a social media addict. We have everything we need to know about them on @thePHISHER86. \n"
+				+ "Be aware, The PHISHER, loves novelty security tech. You will need to find out some information about him. We do not have anything on our CIA database, but the PHISHER is a social media addict. We have everything we need to know about them on @the.phisher. \n"
 				+ "\n"
 				+ "\n"
 				+ "You have everything you need Agent "  + textIWant
@@ -501,7 +501,20 @@ public class Game {
 	public void picture() {
 
 		position = "pic";
-		String picture = "";
+		String picture = "                       %^                                                     \r\n"
+				+ "                           $&^                                                     \r\n"
+				+ "                            /,....,                                             \r\n"
+				+ "                           #(/*,,,,/*/                                          \r\n"
+				+ "                           ,#@#(/****/**                                        \r\n"
+				+ "                            #&%#/(/*,**/**                                      \r\n"
+				+ "                              &%##(/****////*                                   \r\n"
+				+ "                               &&%##(/*****/////*,                              \r\n"
+				+ "                                *&&%###(/***//(((((///                          \r\n"
+				+ "                                  .&&#####((////(((((##((                       \r\n"
+				+ "                                     @&#(##%###((/(((###%#                      \r\n"
+				+ "                                        @&#((###%%####%%&&                      \r\n"
+				+ "                                           @&&&%###%%&&&&@                      \r\n"
+				+ "                                         ...,,,*//((((%@@@@@@(      ";
 
 		mainTextArea.setText(picture);
 
@@ -577,8 +590,26 @@ public class Game {
 
 	public void draw() {
 		position = "draw";
-
-		mainTextArea.setText("meme");
+		String meme = "                                                                                \r\n"
+				+ "                                       *,..,*                                   \r\n"
+				+ "                                      */,,,..,                                  \r\n"
+				+ "                                    /,,,/*,,..,,                                \r\n"
+				+ "                                      /,,**,,...,*                              \r\n"
+				+ "                                        ,*,/,,...,*                             \r\n"
+				+ "                                 .**.     .*/,,...,*                            \r\n"
+				+ "                           ,............,,,*/*,,...,.                           \r\n"
+				+ "                          *,,,,,,,,,,...........,,..,*                          \r\n"
+				+ "                       *,,*,         (*,,,..........,,*                         \r\n"
+				+ "                      .,,...,/            ,..........,,*                        \r\n"
+				+ "                       *,....,*          /,,.........,,/                        \r\n"
+				+ "                        ,,.....,     **,,...........,,(                         \r\n"
+				+ "                         *,,.......................,,/                          \r\n"
+				+ "                          .*,,..................,,,,/                           \r\n"
+				+ "                            (*,,,,,,,,,,,,,,,,,,,,,/                            \r\n"
+				+ "                               /,,,,,,,,,,,,,,,,,*(                             \r\n"
+				+ "                                 .(/********/(#        "
+				;
+		mainTextArea.setText(meme);
 
 		choice1.setText("Check laptop instead ");
 		choice2.setText("Check bookcase instead ");
