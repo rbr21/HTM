@@ -46,9 +46,12 @@ public class Game {
 		return gamePlay;
 	}
 
-	public void endGame(Gameplay gameplay) {
-		if (gameplay.loss) {
-			introduction();
+	public void brickBreakerMessage(Gameplay gameplay) {
+		if (gameplay.loss == true) {
+			brickBreakerLoss();
+		}
+		else {
+			brickBreakerWin();
 		}
 	}
 
@@ -141,86 +144,86 @@ public class Game {
 
 	public void firstLaptopPassword(){
 
-	     JFrame f = new JFrame("The PHISHER");
-	     JButton b=new JButton("Attempt Entry");
-	     b.setBounds(80,200,140, 40);
-	     f.add(b);
+		JFrame f = new JFrame("The PHISHER");
+		JButton b=new JButton("Attempt Entry");
+		b.setBounds(80,200,140, 40);
+		f.add(b);
 
-	     //set size and location of frame
-	     f.setSize(390, 300);
-	     f.setLocation(100, 150);
-	     //make sure it quits when x is clicked
+		//set size and location of frame
+		f.setSize(390, 300);
+		f.setLocation(100, 150);
+		//make sure it quits when x is clicked
 
-	     //set look and feel
-	     f.setDefaultLookAndFeelDecorated(true);
-	     JLabel labelM = new JLabel("what is the password?");
-	     labelM.setBounds(50, 50, 200, 30);
-	     JLabel label1 = new JLabel("hello");
-	     label1.setBounds(10, 110, 200, 100);
+		//set look and feel
+		f.setDefaultLookAndFeelDecorated(true);
+		JLabel labelM = new JLabel("what is the password?");
+		labelM.setBounds(50, 50, 200, 30);
+		JLabel label1 = new JLabel("hello");
+		label1.setBounds(10, 110, 200, 100);
 
-	     JTextField textfield = new JTextField();
-	     //set size of the text box
-	     textfield.setBounds(50, 100, 200, 30);
-	     //add elements to the frame
-	     f.add(labelM);
-	     f.add(textfield);
-	     f.setLayout(null);
-	     f.setVisible(true);
+		JTextField textfield = new JTextField();
+		//set size of the text box
+		textfield.setBounds(50, 100, 200, 30);
+		//add elements to the frame
+		f.add(labelM);
+		f.add(textfield);
+		f.setLayout(null);
+		f.setVisible(true);
 
-	     b.addActionListener(new ActionListener() {
+		b.addActionListener(new ActionListener() {
 
-	       @Override
-	         public void actionPerformed(ActionEvent arg0) {
-	                 textIWant = textfield.getText();
-	                 //labelM.setText(textIWant);
-	                 f.dispose();
-	                 f.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-	         }
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				textIWant = textfield.getText();
+				//labelM.setText(textIWant);
+				f.dispose();
+				f.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+			}
 
-	         });
-	   }
+		});
+	}
 
 
 	public void bookNameInput(){
 
-	     JFrame f = new JFrame("The PHISHER");
-	     JButton b=new JButton("Submit");
-	     b.setBounds(80,200,140, 40);
-	     f.add(b);
+		JFrame f = new JFrame("The PHISHER");
+		JButton b=new JButton("Submit");
+		b.setBounds(80,200,140, 40);
+		f.add(b);
 
-	     //set size and location of frame
-	     f.setSize(390, 300);
-	     f.setLocation(100, 150);
-	     //make sure it quits when x is clicked
+		//set size and location of frame
+		f.setSize(390, 300);
+		f.setLocation(100, 150);
+		//make sure it quits when x is clicked
 
-	     //set look and feel
-	     f.setDefaultLookAndFeelDecorated(true);
-	     JLabel labelM = new JLabel("Input a Book Title. All in lowercase!");
-	     labelM.setBounds(50, 50, 200, 30);
-	     JLabel label1 = new JLabel("hello");
-	     label1.setBounds(10, 110, 200, 100);
+		//set look and feel
+		f.setDefaultLookAndFeelDecorated(true);
+		JLabel labelM = new JLabel("Input a Book Title. All in lowercase!");
+		labelM.setBounds(50, 50, 200, 30);
+		JLabel label1 = new JLabel("hello");
+		label1.setBounds(10, 110, 200, 100);
 
-	     JTextField textfield = new JTextField();
-	     //set size of the text box
-	     textfield.setBounds(50, 100, 200, 30);
-	     //add elements to the frame
-	     f.add(labelM);
-	     f.add(textfield);
-	     f.setLayout(null);
-	     f.setVisible(true);
+		JTextField textfield = new JTextField();
+		//set size of the text box
+		textfield.setBounds(50, 100, 200, 30);
+		//add elements to the frame
+		f.add(labelM);
+		f.add(textfield);
+		f.setLayout(null);
+		f.setVisible(true);
 
-	     b.addActionListener(new ActionListener() {
+		b.addActionListener(new ActionListener() {
 
-	       @Override
-	         public void actionPerformed(ActionEvent arg0) {
-	                 textIWant = textfield.getText();
-	                 //labelM.setText(textIWant);
-	                 f.dispose();
-	                 f.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-	         }
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				textIWant = textfield.getText();
+				//labelM.setText(textIWant);
+				f.dispose();
+				f.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+			}
 
-	         });
-	   }
+		});
+	}
 
 
 
@@ -262,17 +265,11 @@ public class Game {
 		nameInput();
 	}
 	/*
-
      JFrame f = new JFrame("The PHISHER");
      JButton b=new JButton("Submit");
      b.setBounds(100,100,140, 40);
      f.add(b); }
-
-
-
-
        public static void Simplefield(){
-
      //set size and location of frame
      f.setSize(390, 300);
      f.setLocation(100, 150);
@@ -284,7 +281,6 @@ public class Game {
      labelM.setBounds(50, 50, 200, 30);
      JLabel label1 = new JLabel("hello");
      label1.setBounds(10, 110, 200, 100);
-
      JTextField textfield = new JTextField();
      //set size of the text box
      textfield.setBounds(50, 100, 200, 30);
@@ -293,19 +289,13 @@ public class Game {
      f.add(textfield);
      f.setLayout(null);
      f.setVisible(true);
-
      b.addActionListener(new ActionListener() {
-
        @Override
          public void actionPerformed(ActionEvent arg0) {
                  String textIWant = textfield.getText();
                  labelM.setText(textIWant);
          }
-
          });
-
-
-
   } */
 
 	public void createGameScreen(){
@@ -510,15 +500,15 @@ public class Game {
 
 	public void picture() {
 
-			position = "pic";
-		  String picture = "";
+		position = "pic";
+		String picture = "";
 
-		  mainTextArea.setText(picture);
+		mainTextArea.setText(picture);
 
-		  choice1.setText("Examine the letter");
-		  choice2.setText("Go Upstairs");
-		  choice3.setText("Go downstairs");
-		  choice4.setText("");
+		choice1.setText("Examine the letter");
+		choice2.setText("Go Upstairs");
+		choice3.setText("Go downstairs");
+		choice4.setText("");
 	}
 
 	public void letter() {
@@ -560,29 +550,29 @@ public class Game {
 				+ "Encyclopedia Britannica and Head First Java. Maybe one of these books hold a clue?"
 				+ " ");
 
-		  choice1.setText("Examine books");
-		  choice2.setText("Look through the laptop on the desk ");
-		  choice3.setText("Look inside draw ");
-		  choice4.setText(" ");
+		choice1.setText("Examine books");
+		choice2.setText("Look through the laptop on the desk ");
+		choice3.setText("Look inside draw ");
+		choice4.setText(" ");
 	}
 
 	public void laptop() {
 		position = "laptop";
 
 		mainTextArea.setText("You have chosen to look through the laptop. "
-			      + "You put on your gloves and carefully open the laptop. "
-			      + "It is password protected. This time, it requires three letters. "
-			      + "so far, we know that THE PHISHER, has terrible passwords "
-			      + "Common passwords are names, footballteams, and fictional characters "
-			      + "2020 had a lot of ILOVE.. type passwords "
-			      + "Perhaps we can guess his password based on common patterns. ");
+				+ "You put on your gloves and carefully open the laptop. "
+				+ "It is password protected. This time, it requires three letters. "
+				+ "so far, we know that THE PHISHER, has terrible passwords "
+				+ "Common passwords are names, footballteams, and fictional characters "
+				+ "2020 had a lot of ILOVE.. type passwords "
+				+ "Perhaps we can guess his password based on common patterns. ");
 
-		  firstLaptopPassword();
+		firstLaptopPassword();
 
-		  choice1.setText("Confirm Attempt");
-		  choice2.setText("Go Downstairs");
-		  choice3.setText("Go to Groundfloor");
-		  choice4.setText(" ");
+		choice1.setText("Confirm Attempt");
+		choice2.setText("Go Downstairs");
+		choice3.setText("Go to Groundfloor");
+		choice4.setText(" ");
 	}
 
 	public void draw() {
@@ -616,59 +606,74 @@ public class Game {
 		mainTextArea.setText("There are 1000s of books, you do not have time to go through them all. If there is a clue to the location of Agent Tor "
 				+ "What book should you be looking for?");
 
-	    bookNameInput();
-	    choice1.setText("Enter and Confirm Book title");
-	    choice2.setText("Go back laptop");
-	    choice3.setText("Check Draw ");
-	    choice4.setText("Go to ground floor");
+		bookNameInput();
+		choice1.setText("Enter and Confirm Book title");
+		choice2.setText("Go back laptop");
+		choice3.setText("Check Draw ");
+		choice4.setText("Go to ground floor");
 
 	}
-	 public void note() {
-		   position = "note";
+	public void note() {
+		position = "note";
 
-		   mainTextArea.setText("fallout game ");
+		mainTextArea.setText("fallout game ");
 
-		    choice1.setText("idk");
-		    choice2.setText("Go back and guess the password");
-		    choice3.setText(" ");
-		    choice4.setText(" ");
-		 }
+		choice1.setText("idk");
+		choice2.setText("Go back and guess the password");
+		choice3.setText(" ");
+		choice4.setText(" ");
+	}
 
-		 public void endScreen() {
-		   position = "endScreen";
-		   mainTextArea.setText("Amazing Job. You have recovered Agent Tor. "
-		   + "He had a firewall, but he has not updated it since 2007, so it was quickly disabled "
-		   + "Always keep your firewalls and antiviruses updated!");
+	public void brickBreakerWin() {
+		position = "brickBreakerWin";
+		mainTextArea.setText("Amazing Job. The note says 'the shortest history of germany'."
+				+ "                                   He had a firewall, but he has not updated it since 2007, so it was quickly disabled. "
+				+ "Always keep your firewalls and antiviruses updated!");
 
-		   choice1.setText(" ");
-		   choice2.setText(" ");
-		   choice3.setText(" ");
-		   choice4.setText(" ");
+		choice1.setText(" ");
+		choice2.setText("Go to bookshelf");
+		choice3.setText(" ");
+		choice4.setText(" ");
 
-		 }
+	}
+	
+	public void brickBreakerLoss() {
+		position = "brickBreakerLoss";
+		mainTextArea.setText("Firewall not destroyed! "
+				+ "The Phisher has been alerted! "
+				+ "Mission Failed ");
 
-		 public void noteInBook() {
-		   position = "booknote";
-		   mainTextArea.setText("You find a picture of a cat with initials on the reverse: K.F, hmm...");
-
-		   choice1.setText("Go to laptop");
-		   choice2.setText("Go Downstairs");
-		   choice3.setText("Go to Ground ");
-		   choice4.setText("");
-
-		 }
+		choice1.setText("Start again");
+		choice2.setText(" ");
+		choice3.setText(" ");
+		choice4.setText(" ");
+	}
 
 
-		 public void finalLaptopPassword() {
-		   position = "laststage";
-		   mainTextArea.setText("You managaed to guess the password, but you underestimated him. He has a crazy firewall installed");
+	public void victory() {
+		position = "booknote";
+		mainTextArea.setText("Tho bookshelf slides open..."
+				+ "THERE'S AGENT TOR TIED UP IN A SECRET ROOM!"
+				+ " MISSION ACCOMPLISHED!");
 
-		   choice1.setText("Crack the Firewall");
-		   choice2.setText("Go Downstairs");
-		   choice3.setText("Go to Ground");
-		   choice4.setText("");
+		choice1.setText("Start again");
+		choice2.setText("");
+		choice3.setText("");
+		choice4.setText("");
 
-		 }
+	}
+
+
+	public void finalLaptopPassword() {
+		position = "laststage";
+		mainTextArea.setText("You managaed to guess the password, but you underestimated him. He has a crazy firewall installed");
+
+		choice1.setText("Crack the Firewall");
+		choice2.setText("Go Downstairs");
+		choice3.setText("Go to Ground");
+		choice4.setText("");
+
+	}
 
 	public class TitleScreenHandler implements ActionListener{
 
@@ -685,148 +690,144 @@ public class Game {
 		public void actionPerformed(ActionEvent event){
 
 
-			  String yourChoice = event.getActionCommand();
-			  switch(position) {
-			  case "intro":
-			    switch(yourChoice) {
-			    case "c1": knockDoor(); break;
-			    case "c2": backDoor(); break;
-			    case "c3": window(); break;
-			    } break;
-			  case "knockingDoor":
-			    switch(yourChoice) {
-			    case "c1": introduction(); break;
-			    } break;
-			  case "back":
-			    switch(yourChoice) {
-			    case "c1":
-			      if (textIWant.equals("0130")){
-			         enterGroundFloor();
-			      }
-			      else {
-			        backDoor();
-			      }
+			String yourChoice = event.getActionCommand();
+			switch(position) {
+			case "intro":
+				switch(yourChoice) {
+				case "c1": knockDoor(); break;
+				case "c2": backDoor(); break;
+				case "c3": window(); break;
+				} break;
+			case "knockingDoor":
+				switch(yourChoice) {
+				case "c1": introduction(); break;
+				} break;
+			case "back":
+				switch(yourChoice) {
+				case "c1":
+					if (textIWant.equals("0130")){
+						enterGroundFloor();
+					}
+					else {
+						backDoor();
+					}
 
-			     break;
-			    } break;
-			  case "window":
-			    switch(yourChoice) {
-			    case "c1": introduction(); break;
-			    } break;
-			  case "ground":
-			    switch(yourChoice) {
-			    case "c1": explore(); break;
-			    case "c2": goUpstairs(); break;
-			    case "c3": goDownstairs(); break;
-			    } break;
-			  case "groundTwo":
-			    switch(yourChoice) {
-			    case "c1": picture(); break;
-			    case "c2": letter(); break;
-			    case "c3": enterGroundFloor(); break;
-			    } break;
-			  case "upstairs":
-			    switch(yourChoice) {
-			    case "c1": bookshelf(); break;
-			    case "c2": laptop(); break;
-			    case "c3": draw(); break;
-			    case "c4": enterGroundFloor(); break;
-			    } break;
-			  case "downstairs":
-			    switch(yourChoice) {
-			    case "c1": biscuit(); break;
-			    case "c2": enterGroundFloor(); break;
-			    case "c3": goUpstairs(); break;
-			    } break;
-			  case "pic":
-			    switch(yourChoice) {
-			    case "c1": letter(); break;
-			    }break;
-			    case "c2": goUpstairs(); break;
-			    case "c3": goDownstairs(); break;
-			  case "letter":
-			    switch(yourChoice) {
-			    case "c1": love(); break;
-			    case "c2": explore(); break;
-			    } break;
-			  case "love":
-			    switch(yourChoice) {
-			    case "c1": explore(); break;
-			    case "c2": goUpstairs(); break;
-			    case "c3": goDownstairs(); break;
-			    } break;
-			  case "book":
-			    switch(yourChoice) {
-			    case "c1": pickBook(); break;
-			    case "c2": laptop(); break;
-			    case "c3": draw(); break;
-			    } break;
-			  case "laptop":
-			    switch(yourChoice) {
-			    case "c1":
-			    if (textIWant.equalsIgnoreCase("ilovekat")){
-			      finalLaptopPassword(); }
-			    else {
-			      laptop();
-			    } ; break;
-			    case "c2": goDownstairs(); break;
-			    case "c3": enterGroundFloor(); break;
-			    } break;
-			  case "draw":
-			    switch(yourChoice) {
-			    case "c1": laptop(); break;
-			    case "c2": bookshelf(); break;
-			    case "c3": enterGroundFloor(); break;
-			    } break;
-			  case "biscuit":
-			    switch(yourChoice) {
-			    case "c1": introduction(); break;
-			    } break;
-			  case "pick":
-			    switch(yourChoice) {
-			    case "c1":
-			      if (textIWant.equals("the shortest history of germany")){
-			        noteInBook();}
-			    else {  pickBook();} break;
-			    case "c2": laptop(); break;
-			    case "c3": draw(); break;
-			    case "c4": enterGroundFloor(); break;} break;
+					break;
+				} break;
+			case "window":
+				switch(yourChoice) {
+				case "c1": introduction(); break;
+				} break;
+			case "ground":
+				switch(yourChoice) {
+				case "c1": explore(); break;
+				case "c2": goUpstairs(); break;
+				case "c3": goDownstairs(); break;
+				} break;
+			case "groundTwo":
+				switch(yourChoice) {
+				case "c1": picture(); break;
+				case "c2": letter(); break;
+				case "c3": enterGroundFloor(); break;
+				} break;
+			case "upstairs":
+				switch(yourChoice) {
+				case "c1": bookshelf(); break;
+				case "c2": laptop(); break;
+				case "c3": draw(); break;
+				case "c4": enterGroundFloor(); break;
+				} break;
+			case "downstairs":
+				switch(yourChoice) {
+				case "c1": biscuit(); break;
+				case "c2": enterGroundFloor(); break;
+				case "c3": goUpstairs(); break;
+				} break;
+			case "pic":
+				switch(yourChoice) {
+				case "c1": letter(); break;
+				}break;
+			case "c2": goUpstairs(); break;
+			case "c3": goDownstairs(); break;
+			case "letter":
+				switch(yourChoice) {
+				case "c1": love(); break;
+				case "c2": explore(); break;
+				} break;
+			case "love":
+				switch(yourChoice) {
+				case "c1": explore(); break;
+				case "c2": goUpstairs(); break;
+				case "c3": goDownstairs(); break;
+				} break;
+			case "book":
+				switch(yourChoice) {
+				case "c1": pickBook(); break;
+				case "c2": laptop(); break;
+				case "c3": draw(); break;
+				} break;
+			case "laptop":
+				switch(yourChoice) {
+				case "c1":
+					if (textIWant.equalsIgnoreCase("ilovekat")){
+						finalLaptopPassword(); }
+					else {
+						laptop();
+					} ; break;
+				case "c2": goDownstairs(); break;
+				case "c3": enterGroundFloor(); break;
+				} break;
+			case "draw":
+				switch(yourChoice) {
+				case "c1": laptop(); break;
+				case "c2": bookshelf(); break;
+				case "c3": enterGroundFloor(); break;
+				} break;
+			case "biscuit":
+				switch(yourChoice) {
+				case "c1": introduction(); break;
+				} break;
+			case "pick":
+				switch(yourChoice) {
+				case "c1":
+					if (textIWant.equals("the shortest history of germany")){
+						victory();}
+					else {  pickBook();} break;
+				} break;
 
-			  case "booknote":
-			    switch(yourChoice){
-			      case "c1": laptop();break;
-			      case "c2": goDownstairs();break;
-			      case "c3": enterGroundFloor();break;
-			    }break;
+			case "insta":
+				switch(yourChoice) {
+				case "c1": introduction(); break;
+				case "c2": note(); break;
+				} break;
+			case "blog":
+				switch(yourChoice) {
+				case "c1": introduction(); break;
+				case "c2": note(); break;
+				} break;
+			case "laststage":
+				switch(yourChoice){
+				case "c1": Gameplay playGame = playGame();break;
+				case "c2": goDownstairs();break;
+				case "c3": enterGroundFloor(); break;
 
-			  case "insta":
-			    switch(yourChoice) {
-			    case "c1": introduction(); break;
-			    case "c2": note(); break;
-			    } break;
-			  case "blog":
-			    switch(yourChoice) {
-			    case "c1": introduction(); break;
-			    case "c2": note(); break;
-			  } break;
-			  case "laststage":
-			    switch(yourChoice){
-			      case "c1": Gameplay playGame = playGame();
-			        endScreen();
-			        break;
-			      case "c2": goDownstairs();break;
-			      case "c3": enterGroundFloor(); break;
+				}
+			case "brickBreakerWin":
+				switch(yourChoice) {
+				case "c2": bookshelf(); break;
+				}
+			case "brickBreakerLoss":
+				switch(yourChoice) {
+				case "c1": introduction(); break;
+				}
 
-			    }
-
-
-			  case "note":
-			    switch(yourChoice) {
-			    case "c1": introduction(); break;
-			    } break;
-			    }
+			case "booknote":
+				switch(yourChoice) {
+				case "c1": introduction(); break;
+				} break;
+			}
 
 
-			  }
+		}
 
-			}}
+	}}
